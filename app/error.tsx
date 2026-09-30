@@ -1,0 +1,2 @@
+'use client';
+export default function Error({reset}:{error:Error & {digest?:string};reset:()=>void}){return <main className="container-narrow py-24 text-center"><h1 className="text-3xl font-semibold">Something went wrong.</h1><p className="mt-3 text-sm muted">The page could not be rendered.</p><button onClick={()=>reset()} className="mt-6 rounded-xl bg-[var(--accent)] px-4 py-2.5 text-sm font-semibold text-[var(--bg)]">Try again</button></main>}

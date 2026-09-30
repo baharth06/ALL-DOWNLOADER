@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out
+.env*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+worker/data/
+worker/downloads/
+worker/temp/
+worker/.venv
+__pycache__
+*.pyc
+.pytest_cache
+data/

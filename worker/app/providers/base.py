@@ -1,0 +1,16 @@
+from __future__ import annotations
+from abc import ABC, abstractmethod
+from typing import Any
+
+class Provider(ABC):
+    name: str
+    @abstractmethod
+    def can_handle(self, url: str) -> bool: ...
+    @abstractmethod
+    async def analyze(self, url: str) -> dict[str, Any]: ...
+    @abstractmethod
+    def get_formats(self, info: dict[str, Any]) -> list[dict[str, Any]]: ...
+    @abstractmethod
+    async def create_download_job(self, options: dict[str, Any]): ...
+    @abstractmethod
+    async def validate(self, url: str): ...
